@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import heroImg from "@assets/Gemini_Generated_Image_unlrl5unlrl5unlr-Photoroom_1781790777135.png";
+import heroImg from "@assets/Gemini_Generated_Image_xcktqvxcktqvxckt-Photoroom_1781794643413.png";
 import { ArrowRight } from "lucide-react";
 
 const containerVariants = {
