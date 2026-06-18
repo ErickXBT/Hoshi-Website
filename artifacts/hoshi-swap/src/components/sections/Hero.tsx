@@ -22,7 +22,7 @@ export default function Hero() {
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
       
-      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="container mx-auto px-6 grid lg:grid-cols-[35%_65%] gap-8 items-center relative z-10">
         <motion.div 
           variants={containerVariants}
           initial="hidden"
@@ -85,7 +85,7 @@ export default function Hero() {
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             src={heroImg} 
             alt="HOSHI Wallet Interface" 
-            className="relative z-10 w-full max-w-[600px] mx-auto drop-shadow-2xl"
+            className="relative z-10 w-full max-w-full drop-shadow-2xl"
           />
         </motion.div>
       </div>
