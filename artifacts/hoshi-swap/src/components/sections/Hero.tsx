@@ -38,9 +38,9 @@ export default function Hero() {
             variants={itemVariants}
             className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tighter leading-[1.1] mb-6"
           >
-            Your Keys.<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">Your Crypto.</span><br />
-            Your Freedom.
+            Hoshi Swap<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">Self Custody</span><br />
+            Crypto Wallet.
           </motion.h1>
           
           <motion.p 

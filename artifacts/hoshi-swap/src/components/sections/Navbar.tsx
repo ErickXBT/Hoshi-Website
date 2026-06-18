@@ -32,6 +32,7 @@ export default function Navbar() {
           <a href="#nfts" className="hover:text-primary transition-colors">NFTs</a>
           <a href="#roadmap" className="hover:text-primary transition-colors">Roadmap</a>
           <a href="#community" className="hover:text-primary transition-colors">Community</a>
+          <a href="/docs" className="hover:text-primary transition-colors" data-testid="link-nav-docs">Docs</a>
         </div>
 
         <Button 
