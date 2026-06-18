@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import heroImg from "@assets/Gemini_Generated_Image_xcktqvxcktqvxckt-Photoroom_1781794643413.png";
 import { ArrowRight } from "lucide-react";
 
 const containerVariants = {
@@ -18,75 +17,77 @@ const itemVariants = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
-      
-      <div className="container mx-auto px-6 grid lg:grid-cols-[35%_65%] gap-8 items-center relative z-10">
-        <motion.div 
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Video background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        src="/hero-bg.mp4"
+      />
+
+      {/* Overlays */}
+      <div className="absolute inset-0 bg-black/55 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent pointer-events-none" />
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-6 pt-24 pb-16">
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-2xl"
+          className="max-w-3xl"
         >
-          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary border border-border text-sm text-muted-foreground mb-6">
+          <motion.div
+            variants={itemVariants}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur border border-white/20 text-sm text-white/80 mb-8"
+          >
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             Welcome to the future of self-custody
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             variants={itemVariants}
-            className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tighter leading-[1.1] mb-6"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[1.05] mb-6 text-white"
           >
             Hoshi Swap<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">Self Custody</span><br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">
+              Self Custody
+            </span><br />
             Crypto Wallet.
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed"
+            className="text-lg md:text-xl text-white/70 mb-10 leading-relaxed max-w-xl"
           >
             Take full control of your digital assets with the most powerful non-custodial, multi-chain crypto wallet built for the modern Web3 era.
           </motion.p>
-          
+
           <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4">
-            <Button 
-              size="lg" 
-              asChild 
-              className="h-14 px-8 text-lg bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-full shadow-[0_0_30px_rgba(249,115,22,0.4)] hover:shadow-[0_0_40px_rgba(249,115,22,0.6)] transition-all"
+            <Button
+              size="lg"
+              asChild
+              className="h-14 px-8 text-lg bg-primary hover:bg-primary/90 text-white font-bold rounded-full shadow-[0_0_30px_rgba(249,115,22,0.5)] hover:shadow-[0_0_45px_rgba(249,115,22,0.7)] transition-all"
             >
               <a href="https://hoshiswap.xyz/" target="_blank" rel="noreferrer" data-testid="button-hero-create-wallet">
                 CREATE WALLET <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              asChild 
-              className="h-14 px-8 text-lg rounded-full border-border hover:bg-secondary transition-all"
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="h-14 px-8 text-lg rounded-full border-white/30 text-white hover:bg-white/10 backdrop-blur transition-all"
             >
               <a href="#features" data-testid="button-hero-explore">
                 Explore Features
               </a>
             </Button>
           </motion.div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-          className="relative hidden lg:block"
-        >
-          <div className="absolute inset-0 bg-primary/20 blur-[80px] rounded-full mix-blend-screen" />
-          <motion.img 
-            animate={{ y: [-10, 10, -10] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            src={heroImg} 
-            alt="HOSHI Wallet Interface" 
-            className="relative z-10 w-full max-w-full drop-shadow-2xl"
-          />
         </motion.div>
       </div>
     </section>
