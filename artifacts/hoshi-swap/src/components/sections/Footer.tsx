@@ -11,7 +11,7 @@ export default function Footer() {
               <img src={logo} alt="HOSHI Swap Logo" className="w-12 h-12 object-contain" />
               <span className="text-2xl font-bold tracking-tight">HOSHI Swap</span>
             </div>
-            <p className="text-muted-foreground">The all-in-one Web3 wallet</p>
+            <p className="text-muted-foreground">Self Custody Crypto Wallet</p>
           </div>
 
           <div className="flex items-center gap-6">
@@ -38,7 +38,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; 2025 HOSHI Swap. All rights reserved.
+            &copy; 2026 HOSHI Swap. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
