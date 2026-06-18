@@ -1,5 +1,5 @@
 import Navbar from "@/components/sections/Navbar";
-import Hero from "@/components/sections/Hero";
+import HeroScroll from "@/components/sections/HeroScroll";
 import Features from "@/components/sections/Features";
 import AppShowcase from "@/components/sections/AppShowcase";
 import HowItWorks from "@/components/sections/HowItWorks";
@@ -14,7 +14,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary/30 selection:text-primary-foreground">
       <Navbar />
       <main>
-        <Hero />
+        <HeroScroll />
         <Features />
         <AppShowcase />
         <HowItWorks />
