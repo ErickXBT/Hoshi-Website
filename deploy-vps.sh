@@ -62,6 +62,7 @@ cd "$WEB_ROOT"
 
 # Ensure we have correct permissions
 chown -R root:root "$WEB_ROOT"
+chmod -R 755 "$WEB_ROOT"
 
 # Run pnpm install
 pnpm install
