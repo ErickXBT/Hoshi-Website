@@ -85,8 +85,8 @@ NGINX_CONF="/etc/nginx/sites-available/$DOMAIN"
 
 cat > "$NGINX_CONF" <<EOF
 server {
-    listen 80;
-    listen [::]:80;
+    listen 80 default_server;
+    listen [::]:80 default_server;
     server_name $DOMAIN www.$DOMAIN;
 
     root $VITE_APP_DIR/dist/public;
