@@ -143,13 +143,13 @@ echo -e "${GREEN}Nginx successfully configured and restarted!${NC}"
 # 8. SSL Certificate setup with Certbot
 echo -e "${YELLOW}Step 7: Checking DNS configuration for SSL...${NC}"
 # Simple DNS check before certbot to avoid failure
-VPS_IP=\$(curl -s https://api.ipify.org)
-DOMAIN_IP=\$(dig +short $DOMAIN | tail -n1)
+VPS_IP=$(curl -s https://api.ipify.org)
+DOMAIN_IP=$(dig +short $DOMAIN | tail -n1)
 
 echo -e "VPS Public IP: $VPS_IP"
-echo -e "$DOMAIN IP: \$DOMAIN_IP"
+echo -e "$DOMAIN IP: $DOMAIN_IP"
 
-if [ "\$VPS_IP" == "\$DOMAIN_IP" ]; then
+if [ "$VPS_IP" == "$DOMAIN_IP" ]; then
   echo -e "${GREEN}DNS is pointing correctly. Setting up Let's Encrypt SSL...${NC}"
   certbot --nginx -d $DOMAIN -d www.$DOMAIN --non-interactive --agree-tos -m admin@$DOMAIN || true
   echo -e "${GREEN}SSL configuration completed!${NC}"
